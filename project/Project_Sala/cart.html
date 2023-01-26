@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Cart</title>
+        <link rel="stylesheet" href="decorate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+
+    <!--Cart container-->
+    <main class="cart-container">
+
+        <!--Title-->
+        <div class="Title">
+            Shopping cart
+        </div>
+
+        <div class="item">
+            <div class="buttons">
+              <span class="delete-btn">
+                  <img src="image/cross.svg" alt="" />
+              </span>
+            </div>
+
+            <div class="image-box">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/shinobu.jpg" alt="" style="height: 120px;"/>
+            </div>
+
+            <div class="-cart-description">
+                <h3>Kochou Shinobu</h3>
+                <p></p>
+            </div>
+
+            <div class="quantity">
+                <button class="plus-btn" type="button" name="button">
+                <img src="image/plus.svg" alt="" style="height: 10px; width: 12px;"/>
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="minus-btn" type="button" name="button">
+                <img src="image/minus.svg" alt="" style="height: 12px; width: 12px;"/>
+                </button>
+            </div>
+
+            <div class="total-price">3,076.16฿</div>
+        </div>
+
+        <hr> 
+        <div class="checkout">
+            <div class="total">
+            <div>
+            <div class="Subtotal">Sub-Total</div>
+            <div class="items">1 items</div>
+        </div>
+            <div class="total-amount">3,076.16฿</div>
+        </div>
+            <button class="cart-button">Checkout</button>
+        </div>
+    </main>
+
+    <script>
+        function S_open() {
+            document.getElementById("sidebar").style.display = "block";
+        }
+        function S_close() {
+            document.getElementById("sidebar").style.display = "none";
+        }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="decorate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Top Bar-->
+        <div class="topNav">
+            <a href="Home.html" class="Logo">
+                <img src="image/logo_v1.png" style="width: 70px;">
+                </a>
+            <a href="#Register" class="register">+ Create Account</a>
+            <a href="login.html" class="login">Sign In</a>
+        </div>
+
+        <!--Nav Bar-->
+        <div id="navbar">
+            <a href="Home.html" class="split">Home</a>
+            <a href="Product.html" class="Product">Product</a>
+            <a href="" class="aboutUs">About us</a>
+            <a href="cart.html" class="cart">
+                <img src="image/shopping-cart.png" style="width: 20px;">
+            </a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="textS" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    
+    <!--Slideshow-->
+    <div class="Slideshow-container">
+        <div class="Slides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="image/Product001.jpg" style="width:100%">
+            <div class="text-slideshow"></div>
+        </div>
+        <div class="Slides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="image/Product002.jpg" style="width:100%">
+            <div class="text-slideshow">Product002</div>
+        </div>
+        <div class="Slides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="image/Product003.jpg" style="width:100%">
+            <div class="text-slideshow">Product003</div>
+        </div>
+        <div class="Slides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="image/Product004.jpg" style="width:100%">
+            <div class="text-slideshow">Product004</div>
+        </div>
+        <div class="Slides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="image/Product005.jpg" style="width:100%">
+            <div class="text-slideshow">Product005</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!--New text-->
+    <div class="New-product">
+        <h3>
+            Early Bird Specials
+        </h3>
+        <div class="to-product">
+            <a href="Product.html">see all product</a>
+        </div>
+        <div class="line-new">
+            <hr width="100%" color="green" />
+        </div>
+    </div>
+
+    <!--New product list-->
+    <div class="New-productList">
+        <div class="cols">
+            <a href="ProductDetail.html">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/shinobu.jpg" alt="Product001" style="height: 287px;">
+            </a>
+            <h3>Kimetsu no Yaiba - Kochou Shinobu - Figma #575 (Max Factory)</h3><br>
+            <p style="color: red;">
+                Release 30 jun 2023
+            </p>
+        </div>
+        <div class="cols">
+            <a href="ProductDetail.html">
+                <img src="image/Product/Figures/GenshinImpact/Xiao/d270e186-3990-11ed-ab24-5600040d5bd1_720x_6740339.jpg" alt="Product002" style="width: 257px; height: 287px; object-fit: fill;">
+            </a>
+            <h3>Genshin Impact - Xiao - Guardian Yaksha Ver. - 1/7 (Apex)</h3><br>
+            <p style="color: red;">
+                Release 30 jun 2023
+            </p>
+        </div>
+        <div class="cols">
+            <a href="ProductDetail.html">
+                <img src="image/Product/Figures/ChainsawMan/Denji/Shibuya_Scramble/e2b063c5-b41a-4e37-be35-1fe644d01f98_4486228975153976-removebg-preview__1_-removebg-preview_3000x.webp" alt="Product003" style="height: 287px;">
+            </a>
+            <h3>Chainsaw Man - Denji - Shibuya Scramble Figure - 1/7 (Alpha Satellite, eStream)</h3><br>
+            <p style="color: red;">
+                Release 31 jul 2023
+            </p>
+        </div>
+    </div>
+
+    <!--Hot text-->
+    <div class="Hot-product">
+        <h3>
+            Hot
+        </h3>
+        <div class="to-product">
+            <a href="Product.html">see all product</a>
+        </div>
+        <div class="line-new">
+            <hr width="100%" color="green" />
+        </div>
+    </div>
+
+    <!--Hot product-->
+    <div class="Hot-productList">
+        <div class="cols">
+            <img src="image/Product_proto.jpg" alt="Hot-List-Product001">
+            <h3>Test-Product</h3>
+            <p>
+                details of product
+            </p>
+        </div>
+        <div class="cols">
+            <img src="image/Product_proto.jpg" alt="Hot-List-Product002">
+            <h3>Test-Product</h3>
+            <p>
+                details of product
+            </p>
+        </div>
+        <div class="cols">
+            <img src="image/Product_proto.jpg" alt="Hot-List-Product003">
+            <h3>Test-Product</h3>
+            <p>
+                details of product
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n){
+        showSlides(slideIndex += n);
+        }   
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("Slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    
+    </body>
+</html>

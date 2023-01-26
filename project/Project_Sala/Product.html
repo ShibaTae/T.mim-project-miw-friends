@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>All Product</title>
+    <link rel="stylesheet" href="decorate.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Top Bar-->
+    <div class="topNav">
+        <a href="Home.html" class="Logo">Logo</a>
+        <a href="#Register" class="register">+ Create Account</a>
+        <a href="login.html" class="login">Sign In</a>
+    </div>
+
+
+    <!--Nav Bar-->
+    <div id="navbar">
+        <a href="Home.html" class="split">Home</a>
+        <a href="Product.html" class="Product">Product</a>
+        <a href="" class="aboutUs">About us</a>
+        <a href="cart.html" class="cart">
+            <img src="image/shopping-cart.png" style="width: 20px;">
+        </a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="textS" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="main-content">
+
+        <!--First Products rows-->
+        <div class="first row">
+            <div class="cols">
+				<a href="ProductDetail.html">
+                    <img src="Project_Sala/image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/shinobu.jpg" alt="Product001" style="height: 287px;">
+                </a>
+                <h3>Kimetsu no Yaiba - Kochou Shinobu - Figma #575 (Max Factory)</h3><br>
+                <button type="submit" class="buyBtn">PRE ORDER
+                    <p style="color: #fff; font-size: 18px;">3000 ฿</p>
+                </button>
+                <a href="ProductDetail.html">
+                    <button type="submit" class="ReleaseBtn">Release
+                        <p style="color:#fff;">30 jun 2023</p>
+                    </button>
+                </a>
+            </div>
+            <div class="cols">
+				<a href="ProductDetail.html">
+                    <img src="Project_Sala/image/Product/Figures/GenshinImpact/Xiao/d270e186-3990-11ed-ab24-5600040d5bd1_720x_6740339.jpg" alt="Product002" style="width: 257px; height: 287px; object-fit: fill;">
+                </a>
+                <h3>Genshin Impact - Xiao - Guardian Yaksha Ver. - 1/7 (Apex)</h3><br>
+                <p style="color: red;">
+                    Release 30 jun 2023
+                </p>
+            </div>
+            <div class="cols">
+				<a href="ProductDetail.html">
+                    <img src="Project_Sala/image/Product/Figures/ChainsawMan/Denji/Shibuya_Scramble/e2b063c5-b41a-4e37-be35-1fe644d01f98_4486228975153976-removebg-preview__1_-removebg-preview_3000x.webp" alt="Product003" style="height: 287px;">
+                </a>
+                <h3>Chainsaw Man - Denji - Shibuya Scramble Figure - 1/7 (Alpha Satellite, eStream)</h3><br>
+                <p style="color: red;">
+                    Release 31 jul 2023
+                </p>
+            </div>
+            <div class="cols">
+				<a href="ProductDetail.html">
+                    <img src="Project_Sala/image/Product/Nendoroid/GenshinImpact/Venti/GoodSmile(id_1795)/13ce5d58-22c0-11ed-bccf-5600040d5bd1_720x.webp" alt="Product004" style="height: 287px;">
+                </a>
+                <h3>Genshin Impact - Venti - Nendoroid #1795 (Good Smile Company)</h3><br>
+                <p style="color: red;">
+                    Sold out
+                </p>
+            </div>
+        </div>
+
+        <!--Second Products rows-->
+        <div class="second row">
+            <div class="cols">
+				<img src="image/Product_proto.jpg" alt="Product005">
+                <h3>Test-Product</h3>
+                <p>
+                    details of product
+                </p>
+            </div>
+            <div class="cols">
+				<img src="image/Product_proto.jpg" alt="Product006">
+                <h3>Test-Product</h3>
+                <p>
+                    details of product
+                </p>
+            </div>
+            <div class="cols">
+				<img src="image/Product_proto.jpg" alt="Product007">
+                <h3>Test-Product</h3>
+                <p>
+                    details of product
+                </p>
+            </div>
+            <div class="cols">
+				<img src="image/Product_proto.jpg" alt="Product008">
+                <h3>Test-Product</h3>
+                <p>
+                    details of product
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyFunction()};
+
+        // Get the navbar
+         var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

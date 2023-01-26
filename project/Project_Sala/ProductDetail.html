@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Details</title>
+        <link rel="stylesheet" href="decorate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Top Bar-->
+        <div class="topNav">
+            <a href="Home.html" class="Logo">Logo</a>
+            <a href="#Register" class="register">+ Create Account</a>
+            <a href="login.html" class="login">Sign In</a>
+        </div>
+
+
+        <!--Nav Bar-->
+        <div id="navbar">
+            <a href="Home.html" class="split">Home</a>
+            <a href="Product.html" class="Product">Product</a>
+            <a href="" class="aboutUs">About us</a>
+            <a href="cart.html" class="cart">
+                <img src="image/shopping-cart.png" style="width: 20px;">
+            </a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="textS" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+    <main class="Product-container">
+
+        <!--Left column / Product image-->
+        <div class="Left-column">
+            <div class="row-one">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/shinobu.jpg" alt="">
+            </div>
+            <div class="row-two">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_04_360x.webp" alt="" style="width: 360px; height: 480px;">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_06_360x.webp" alt="">
+            </div>
+            <div class="row-three">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_05_360x.webp" alt="">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_07_360x_6736210.jpg" alt="" style="width: 360px; height: 480px; object-fit: cover;">
+            </div>
+            <div class="row-fouth">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_09_360x.webp" alt="">
+                <img src="image/Product/Figma/Kimetsu_no_Yaiba/Kochou_Shinobu/Max Factory/FIGURE-142834_03_360x.webp" alt="" style="width: 360px; height: 480px;">
+            </div>
+        </div>
+
+        <!--Right column / Product detail-->
+        <div id="Right-column">
+            <div class="Product-description">
+                <span>figma 鬼滅の刃 胡蝶しのぶ</span>
+                <h2>Kimetsu no Yaiba - Kochou Shinobu - Figma #575 (Max Factory)</h2><br>
+                <p>Franchise : <span>Kimetsu no Yaiba</span><br></p><br>
+                <p>Brand : <span>Max Factory</span></p><br>
+                <p>Release Date : <span style="color: red;">30 Jun 2023</span></p><br>
+                <p>Type : <span>Figma</span></p>
+            </div>
+
+            <div class="Product-price">
+                <span>3,076.16฿</span>
+                <a href="cart.html" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.onscroll = function() {DescriptionStickyFunction()};
+        var DescSti = document.getElementById("Right-column");
+        var Desticky = DescSti.offsetTop;
+        function DescriptionStickyFunction() {
+            if (window.pageYOffset > Desticky) {
+                DescSti.classList.add("Desticky")
+            } else {
+                DescSti.classList.remove("Desticky")
+            }
+        }
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+}
+    </script>
+    </body>
+</html>

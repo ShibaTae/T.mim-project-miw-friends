@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="Ptest.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Top Bar-->
+        <div class="topNav">
+            <a href="Home.html" class="Logo">Logo</a>
+            <a href="#Register" class="register">+ Create Account</a>
+            <a href="login.html" class="login">Sign In</a>
+        </div>
+
+
+        <!--Nav Bar-->
+        <div id="navbar">
+            <a href="Home.html" class="split">Home</a>
+            <a href="Product.html" class="Product">Product</a>
+            <a href="" class="aboutUs">About us</a>
+            <a href="cart.html" class="cart">
+                <img src="image/shopping-cart.png" style="width: 20px;">
+            </a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="textS" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!--Tab Links-->
+        <div class="tab">
+            <button class="tablinks" onclick="profileTab(event, 'OrderHistory')">Order History</button>
+            <button class="tablinks" onclick="profileTab(event, 'Account')">My Account</button>
+        </div>
+          
+        <!-- Tab content -->
+        <div id="OrderHistory" class="tabcontent">
+            <h3>Order History</h3>
+            <p>You haven't placed any orders yet.</p>
+        </div>
+          
+        <div id="Account" class="tabcontent">
+            <h3>My Account</h3>
+            <p>Name : </p>
+            <p>Address : </p>
+        </div>
+
+        <script>
+            function profileTab(evt, page) {
+                var i, tabcontent, tablinks;
+
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for ( i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++){
+                    tablinks[i].className = tablinks[i].className.replace("active","");
+                }
+
+                document.getElementById(page).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+/*--Top bar--*/
+.topNav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    display:flex;
+}
+.topNav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topNav .login{
+    float: right;
+}
+.topNav .register{
+    float: right;
+}
+.topNav .login:hover {
+    color: red;
+}
+.topNav .register:hover {
+    color: red;
+}
+.topNav a.active {
+    background-color: #04AA6D;
+    color: rgb(5, 5, 5);
+}
+
+/*--Nav bar--*/
+#navbar{
+    overflow: hidden;
+    background-color: #333;
+}
+#navbar .search-container {
+    float: right;
+}
+#navbar input[type=textS] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+#navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+#navbar .search-container button:hover {
+    background: #ccc;
+}
+#navbar .cart {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}

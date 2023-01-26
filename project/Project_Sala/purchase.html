@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Cart</title>
+        <link rel="stylesheet" href="decorate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        
+
+    <!--Inovice container-->
+    <main class="inovice-container">
+        <header>
+            <h1>Inovice</h1>
+            <address>
+                <p>Mewza</p>
+                <p>114 ม.8 ตำบล <br>อำเภอ จังหวัด</p>
+                <p>(+66)89-753-1594</p>
+            </address>
+        </header>
+
+        <article>
+            <h3>Recipient</h3>
+            <address>
+				<p>Creamza</p>
+			</address>
+
+            <table class="Recipient-item">
+				<tr>
+					<th><span>Invoice #</span></th>
+					<td><span>101138</span></td>
+				</tr>
+				<tr>
+					<th><span>Date</span></th>
+					<td><span>September 12, 2022</span></td>
+				</tr>
+				<tr>
+					<th><span>Amount Due</span></th>
+					<td><span id="prefix">฿</span><span>3,076.16</span></td>
+				</tr>
+			</table>
+
+            <table class="inventory">
+				<thead>
+					<tr>
+						<th><span>Item</span></th>
+						<th><span>Description</span></th>
+						<th><span>Rate</span></th>
+						<th><span>Quantity</span></th>
+						<th><span>Price</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="cut"></a><span>Kochou Shinobu</span></td>
+						<td><span>Figma</span></td>
+						<td><span data-prefix>฿</span><span>3,076.16</span></td>
+						<td><span>1</span></td>
+						<td><span data-prefix>฿</span><span>3,076.16</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="add">+</a>
+			<table class="balance">
+				<tr>
+					<th><span>Total</span></th>
+					<td><span data-prefix>฿</span><span>3,076.16</span></td>
+				</tr>
+				<tr>
+					<th><span>Amount Paid</span></th>
+					<td><span data-prefix>฿</span><span>0.00</span></td>
+				</tr>
+				<tr>
+					<th><span>Balance Due</span></th>
+					<td><span data-prefix>฿</span><span>3,076.16</span></td>
+				</tr>
+			</table>
+        </article>
+
+        <aside>
+			<h3><span>ช่องทางชำระเงิน</span></h3>
+            <div>
+                <h4>i-banking</h4>
+                <p style="color: orange;">waiting for payment</p>
+            </div>
+			<div class="payment-test">
+                <h4>ธนาคารกสิกรไทย</้4>
+				<p>เลขที่บัญชี : 248-2-55494-1 ชื่อบัญชี : Mewza <br>เมื่อชำระเงินแล้วให้แจ้งหลักฐานการโอนเงินให้เรียบร้อยขอบคุณครับ/ค่ะ</p>
+			</div>
+		</aside>
+
+    </main>
+
+
+    <script>
+        function S_open() {
+            document.getElementById("sidebar").style.display = "block";
+        }
+        function S_close() {
+            document.getElementById("sidebar").style.display = "none";
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<?php
+include('h.php');
+include('backend/condb.php');
+$p_id = $_GET["id"];
+?>
+<!DOCTYPE html>
+
+<head>
+  <title>ระบบร้านค้าออนไลน์</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <style>
+    div.polaroid {
+      width: 80%;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+    }
+
+    div.container_di {
+      text-align: center;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div>
+    <?php include('navbar1_profile.php'); ?>
+    <?php include('navbar2_profile.php'); ?>
+    <div class="row">
+      <?php
+      $sql = "SELECT * FROM tbl_product as p 
+              INNER JOIN tbl_type  as t ON p.type_id=t.type_id 
+              WHERE p_id = $p_id ";
+      $result = mysqli_query($con, $sql) or die("Error in query: $sql " . mysqli_error($con));
+      $row = mysqli_fetch_array($result);
+
+      ?>
+
+      <div class="container" style="margin-top: 50px">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="polaroid">
+              <?php echo "<img src='backend/p_img/" . $row['p_img'] . "'width='100%'>"; ?>
+              <div class="container_di">
+                <p><?php echo $row["p_name"]; ?></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3><b><?php echo $row["p_name"]; ?></b></h3>
+            <p>
+              ประเภท <?php echo $row["type_name"]; ?>
+            </p>
+            <?php foreach (explode("\n", $row["p_detail"]) as $tiger) {
+              echo $tiger . "<br>";
+             
+            } ?>
+             <h4><?php echo $row["p_cost"] ?> ฿ </h4>
+             <a href="order.php?id=<?=$row['p_id'] ?>" style="text-decoration: none;">
+                <button type="submit" class="btn btn-success">Add to cart</button>
+            </a>
+            
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+</body>
+
+</html>
